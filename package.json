@@ -17,13 +17,25 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "lint": "prettier --check './src/**/*.{js,ts,tsx}'",
-    "format": "prettier --write './src/**/*.{js,ts,tsx}'"
+    "lint:prettier": "prettier --check './src/**/*.{js,ts,tsx}'",
+    "format:prettier": "prettier --write './src/**/*.{js,ts,tsx}'",
+    "lint:eslint": "eslint --max-warnings 0 --cache './src/**/*.{js,ts,tsx}'",
+    "format:eslint": "eslint './src/**/*.{js,ts,tsx}' --cache --fix"
   },
   "devDependencies": {
+    "@ci7lus/eslint-config": "^1.0.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --max-warnings 0 --cache",
+    "*.{js,ts,tsx,md}": "prettier"
   }
 }
