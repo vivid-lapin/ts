@@ -23,16 +23,14 @@
     "format:eslint": "eslint './src/**/*.{js,ts,tsx}' --cache --fix"
   },
   "devDependencies": {
-    "@ci7lus/eslint-config": "^1.0.1",
-    "husky": "^7.0.1",
-    "lint-staged": "^11.1.2",
-    "nodemon": "^2.0.12",
-    "prettier": "^2.3.2",
-    "ts-node": "^10.2.0",
-    "typescript": "^4.3.5"
-  },
-  "peerDependencies": {
-    "eslint": "^7.32.0"
+    "@ci7lus/eslint-config": "^1.1.0",
+    "eslint": "^8",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --max-warnings 0 --cache",
